@@ -58,7 +58,7 @@ L.geoJSON(geojsonFeature).addTo(mymap).bindPopup("<b>"+geojsonFeature.properties
     
     function onMapClick(e){
         popup 
-                .setLatlng(e.latlng)
+                .setLatLng(e.latlng)
                 .setContent ("You clicked the map at " + e.latlng.toString())
                 .openOn(mymap);
     }
