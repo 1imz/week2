@@ -43,16 +43,12 @@ function loadEarthquakelayer(earthquakedata) {
     var earthquakejson = JSON.parse(earthquakedata);
     // add the JSON layer onto the map - it will appear using the default icons
     earthquakelayer = L.geoJson(earthquakejson).addTo(mymap);
+    
     // change the map zoom so that all the data is shown
     mymap.fitBounds(earthquakelayer.getBounds());
 }
 </script>
 
-<!-- the following links incorporate the CSS required for custom icon creation -->
-
-    <link rel="stylesheet" href=" ionicons.min.css">
-    <link rel="stylesheet" href="leaflet.awesome-markers.css">
-    <script src="leaflet.awesome-markers.js"></script>
     
 </head>
 
