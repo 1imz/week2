@@ -10,10 +10,7 @@
 
         <!-- the following CSS is used to set the size of the Map -->
         <style type="text/css">
-            #mapid {
-             height: 180px; 
-            }
-                
+            #mapid {height: 180px;}
     </style>
     
       <!-- requests earthquake data -->
@@ -72,9 +69,9 @@ function loadEarthquakelayer(earthquakedata) {
         attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' + '<ahref="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>,' + 'Imagery © <a href="http://mapbox.com">Mapbox</a>',
                                 id: 'mapbox.streets'
                       }).addTo(mymap);
-        document.addEventListener('DOMContentLoaded', function() {
-            getEarthquakes();
-                }, false);
+                            document.addEventListener('DOMContentLoaded', function() {
+                                getEarthquakes();
+                                    }, false);
             
        
 
