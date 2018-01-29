@@ -18,6 +18,7 @@
 // create a variable that will hold the XMLHttpRequest() - this must be done outside a function so
 that all the functions can use the same variable
 var client;
+
 // and a variable that will hold the layer itself – we need to do this outside the function so that we
 can use it to remove the layer later on
 var earthquakelayer;
@@ -36,7 +37,8 @@ function earthquakeResponse() {
     // once the data is ready, process the data
     var earthquakedata = client.responseText;
     loadEarthquakelayer(earthquakedata);
-    }}
+    }
+}
 // convert the received data - which is text - to JSON format and add it to the map
 function loadEarthquakelayer(earthquakedata) {
     // convert the text to JSON
@@ -68,7 +70,7 @@ function loadEarthquakelayer(earthquakedata) {
                                 id: 'mapbox.streets'
                       }).addTo(mymap);
             document.addEventListener('DOMContentLoaded', function() {
-                getEarthquakes();
+             getEarthquakes();
                 }, false);
             
        
